@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShareDrop - File Sharing</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#0f172a;
+  color:white;
+  min-height:100vh;
+}
+
+header{
+  padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #29354d;
+}
+
+.logo{
+  font-size:23px;
+  font-weight:bold;
+  color:#38bdf8;
+}
+
+.logo span{
+  color:white;
+}
+
+.container{
+  max-width:650px;
+  margin:auto;
+  padding:30px 18px;
+}
+
+.hero{
+  text-align:center;
+  margin:25px 0 35px;
+}
+
+.hero h1{
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.hero h1 span{
+  color:#38bdf8;
+}
+
+.hero p{
+  color:#94a3b8;
+  line-height:1.6;
+}
+
+.card{
+  background:#1e293b;
+  border:1px solid #334155;
+  border-radius:18px;
+  padding:22px;
+  margin-bottom:20px;
+}
+
+.card h2{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#94a3b8;
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+
+.btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  background:#0ea5e9;
+  color:white;
+}
+
+.btn:hover{
+  background:#0284c7;
+}
+
+.receive-btn{
+  background:#334155;
+}
+
+.receive-btn:hover{
+  background:#475569;
+}
+
+.file-input{
+  display:none;
+}
+
+.status{
+  text-align:center;
+  margin-top:20px;
+  padding:15px;
+  border-radius:12px;
+  background:#172338;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#64748b;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Share<span>Drop</span></div>
+  <div>📁</div>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>Share Files <span>Instantly</span></h1>
+    <p>Transfer files between devices without cloud storage.</p>
+  </div>
+
+  <div class="card">
+    <h2>📤 Send Files</h2>
+    <p>Select photos, videos, documents or any file to share with another device.</p>
+
+    <input type="file" id="fileInput" class="file-input" multiple>
+
+    <button class="btn" id="sendBtn">
+      Select Files
+    </button>
+
+    <div id="selectedFiles"></div>
+  </div>
+
+  <div class="card">
+    <h2>📥 Receive Files</h2>
+    <p>Connect to another device and receive files securely.</p>
+
+    <button class="btn receive-btn" id="receiveBtn">
+      Receive Files
+    </button>
+  </div>
+
+  <div class="status" id="status">
+    Ready to share files
+  </div>
+
+</div>
+
+<footer>
+  ShareDrop · Free Peer-to-Peer File Sharing
+</footer>
+
+</body>
+  </html>
